@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fll11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/search_bar1"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/listview_theme_data"
+            android:hint="Search"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginBottom="3dp"
+            android:padding="10dp"
+            android:src="@drawable/search_icon" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:onClick="showHelpInternet"
+            android:layout_gravity="end|center"
+            android:padding="20dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/help_icon"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/pw22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Loading Apps List. Please Wait.."
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/pBar11"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="#2196F3"
+            android:indeterminateTintMode="src_atop"
+            android:scrollbarStyle="insideOverlay"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/installed_app_list_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="55dp"
+        android:layout_gravity="center_horizontal"
+        android:choiceMode="multipleChoice"
+        android:divider="@color/white"
+        android:dividerHeight="5sp"
+        android:longClickable="true"
+        android:scrollbars="none" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/limit123"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="10dp"
+        android:background="@drawable/internetbutton_theme"
+        android:text="Limit"
+        android:clickable="false"
+        android:textColor="@color/white" />
+
+</FrameLayout>

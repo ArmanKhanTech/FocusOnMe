@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu1"
+        android:title="Settings"
+        android:icon="@drawable/settings_icon"/>
+
+    <item
+        android:id="@+id/menu2"
+        android:title="Analysis"
+        android:icon="@drawable/analysis_icon"/>
+
+    <item
+        android:id="@+id/menu4"
+        android:title="Parental Control"
+        android:icon="@drawable/parental_control_icon"/>
+
+    <item
+        android:id="@+id/menu5"
+        android:title="About"
+        android:icon="@drawable/info_icon"/>
+
+</menu>

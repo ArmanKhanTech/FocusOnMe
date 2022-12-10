@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.UsageFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usage Stats :"
+        android:textColor="#9C27B0"
+        android:textSize="25dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/fl23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/search_bar123"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/usage_edtheme"
+                android:hint="Search"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginBottom="3dp"
+                android:padding="10dp"
+                android:src="@drawable/search_icon" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:onClick="showHelpUsage"
+                android:layout_gravity="end|center"
+                android:padding="20dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/help_icon"/>
+
+        </FrameLayout>
+
+    <ListView
+        android:id="@+id/usage_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center_horizontal"
+        android:choiceMode="multipleChoice"
+        android:divider="@color/white"
+        android:dividerHeight="5sp"
+        android:longClickable="true"
+        android:scrollbars="none" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lv23"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Fetching Data. Please Wait.."
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/voilet"
+            android:indeterminateTintMode="src_atop"
+            android:scrollbarStyle="insideOverlay" />
+
+    </LinearLayout>
+
+</FrameLayout>
